@@ -1,29 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-STEP 5: Generate expanded ESG dictionary from seed words
-
-WHAT THIS DOES:
-- Loads your trained Word2Vec model
-- Takes seed words from seedwords.py (e.g., "carbon_footprint")
-- Finds top 500 most similar words for each category
-- Removes duplicate words (assigns to most relevant category)
-- Saves expanded dictionaries to words/ folder
-
-EXAMPLE:
-Input seed: "carbon_footprint"
-Expands to: carbon_emission, greenhouse_gas, co2, emission_reduction, etc.
-
-=== CHANGES FROM ORIGINAL ===
-1. UNCHANGED: Core dictionary expansion logic (same algorithm)
-2. ADDED: Progress tracking and statistics
-3. ADDED: Sample word output for verification
-4. ADDED: Category statistics and overlap reporting
-
-
-@author: Optimized from Yan LIN's code
-"""
-
 import gensim
 import os
 import numpy as np
