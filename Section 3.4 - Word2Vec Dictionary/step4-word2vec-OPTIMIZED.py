@@ -1,25 +1,3 @@
-#!/usr/bin/env python
-# -*-coding:utf-8 -*-
-"""
-STEP 4: Train Word2Vec model to learn word embeddings
-
-WHAT THIS DOES:
-- Trains Word2Vec on 20M sentences (with bigrams/trigrams applied)
-- Creates 300-dimensional vectors for each word
-- Learns which words appear in similar contexts (are related)
-- Example: "carbon_footprint" learns to be similar to "emission", "greenhouse_gas"
-- Saves model to word2vec_model/all.word2vec
-
-=== CHANGES FROM ORIGINAL ===
-1. ADDED: Detailed progress logging and statistics
-2. ADDED: Time estimates and completion messages
-3. ADDED: Model statistics (vocab size, training time)
-4. UNCHANGED: Core Word2Vec training parameters and ESG phrase injections
-5. UNCHANGED: Uses gensim Word2Vec with same hyperparameters
-
-@author: Optimized from Yan LIN's code
-"""
-
 import logging
 import gensim
 import pickle
