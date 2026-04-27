@@ -1,26 +1,3 @@
-#!/usr/bin/env python3
-"""
-extract_articles_id_content.py
-
-Extracts the (id, content) columns from the matched-and-filtered articles
-file produced by Section 3.3 (`nomatch_removal.py`). The resulting file is
-the direct input to Word2Vec preprocessing in Section 3.4
-(`step1-preprocessing.py`) and to the environmental-term tokenisation in
-Section 3.5 (`tokenization_scriptGPT.py`).
-
-This step enforces the methodology requirement that Word2Vec training and
-environmental-term tokenisation are performed only on reports linked to a
-Compustat-matched company (the 360'437-report analytical sample). Reports
-that failed company matching are removed earlier by nomatch_removal.py and
-therefore do not appear in the output here.
-
-Input:  articles_clean_filtered.csv   (Section 3.3 output, matched only)
-Output: articles_id_content.csv       (id, content)
-
-Run from the project root that contains articles_clean_filtered.csv:
-    python extract_articles_id_content.py
-"""
-
 import csv
 import os
 import sys
