@@ -1,12 +1,3 @@
-#!/usr/bin/env python3
-# step1_clean_content_chunked.py
-# Clean only the 'content' column into plain text, compress to one line.
-# - Same parser behavior as original:
-#     * Use BeautifulSoup(..., "lxml") if bs4 is available.
-#     * Otherwise, regex fallback stripping tags.
-# - Processes the CSV in chunks to reduce memory pressure.
-# - Emits timing/throughput benchmarks per chunk and overall.
-
 import argparse
 import os
 import time
