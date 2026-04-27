@@ -1,17 +1,3 @@
-#!/usr/bin/env python3
-"""
-reduce_companies_columns.py
-
-Reduces the raw companies.csv export to the identifier columns used by the
-company-matching pipeline (Section 3.3). Drops all other fields.
-
-Input:  companies.csv          (raw Seeking Alpha company export)
-Output: companies_new.csv      (six identifier columns)
-
-Run from the project root that contains companies.csv:
-    python reduce_companies_columns.py
-"""
-
 import os
 import pandas as pd
 
