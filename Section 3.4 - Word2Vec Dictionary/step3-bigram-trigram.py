@@ -1,25 +1,3 @@
-#!/usr/bin/env python
-# -*-coding:utf-8 -*-
-"""
-STEP 3: Detect bigrams and trigrams (2-word and 3-word phrases)
-
-WHAT THIS DOES:
-- Scans through 20M sentences to find common word combinations
-- Example: "climate" + "change" appears together often -> "climate_change"
-- Creates models that will transform text in next step
-- Saves to bigram_trigram_model/all_bigram_trigram_1.pkl
-
-=== CHANGES FROM ORIGINAL ===
-1. ADDED: Detailed logging and progress messages
-2. ADDED: Statistics about vocab sizes and file sizes
-3. ADDED: Sample phrase output to show what was detected
-4. ADDED: Check if model already exists (skip if present)
-5. CORE LOGIC: UNCHANGED - same gensim Phrases implementation
-
-
-@author: Optimized from Yan LIN's code
-"""
-
 import logging
 import os
 from gensim.models import Phrases
