@@ -1,36 +1,3 @@
-#!/usr/bin/env python
-# -*-coding:utf-8 -*-
-"""
-STEP 2: Dump all processed sentences to single text file
-
-WHAT THIS DOES:
-- Reads all .feather files from data/processed_df/
-- Extracts processed sentences
-- Writes to all_sentences/all.txt (one sentence per line)
-- Creates input format for Word2Vec training
-
-=== OPTIMIZATIONS ===
-1. Buffered writing (faster I/O)
-2. Progress tracking
-3. Memory efficient (processes one file at a time)
-
-STEP 2 (Dump Sentences) - Changes from Original:
-CHANGED:
-
-Added: Buffered writing (1MB buffer for faster I/O)
-Added: Progress bar with tqdm
-Added: Detailed statistics (doc count, sentence count, file size)
-Added: Better logging messages
-
-UNCHANGED:
-
-Core logic: reads .feather files, extracts sentences, writes to all.txt
-Output format: one sentence per line, space-separated words
-File paths and structure
-
-@author: Optimized from Yan LIN's code
-"""
-
 import pandas as pd
 from glob import glob
 import logging
