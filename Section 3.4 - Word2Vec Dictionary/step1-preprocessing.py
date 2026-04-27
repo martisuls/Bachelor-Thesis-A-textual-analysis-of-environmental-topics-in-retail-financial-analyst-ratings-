@@ -1,36 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-OPTIMIZED preprocessing for 360K documents - pushes 5700X3D to limits
-
-=== OPTIMIZATIONS ADDED ===
-1. BATCH PROCESSING: nlp.pipe() instead of individual nlp() calls (10-30x faster!)
-2. DISABLED COMPONENTS: Removed unnecessary spaCy features (parser, textcat, etc.)
-3. PARALLEL BATCHING: Process multiple batches simultaneously
-4. LARGER CHUNKS: Increased to 10,000 docs per chunk for better throughput
-5. MAX CPU: Uses all 16 threads (8 cores x 2)
-6. MEMORY EFFICIENT: Streaming + garbage collection
-
-STEP 1 (Preprocessing) - Changes from Original:
-CHANGED:
-
-Input source: File system walking -> Direct CSV reading (articles_id_content.csv)
-Removed: short_listed_pdf.csv filtering, file path matching, files_for_processing.pkl cache
-Optimization: Added batch processing with nlp.pipe() (10-30x faster)
-Optimization: Disabled parser, added sentencizer (faster sentence detection)
-Parallelization: Increased from ~4 workers to 16 workers (full CPU usage)
-Chunk size: Increased 5000 -> 10000 documents per chunk
-Output column: f_name_list -> doc_id
-
-UNCHANGED:
-
-Sententizer class logic (lemmatization, entity replacement, compound handling)
-Output format (.feather files)
-Text preprocessing approach
-
-@author: Optimized from Yan LIN's code
-"""
-
 import os
 import pandas as pd
 import logging
